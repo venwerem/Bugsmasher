@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>Bug Smasher</title>
+        <link href='http://fonts.googleapis.com/css?family=Cherry+Cream+Soda' rel='stylesheet' type='text/css'></link>
+        <script src ="game.js" defer></script>
+        <style>
+            body{
+                max-width: 980px;
+                margin: auto;
+            }
+            #bugSmasherCanvas {
+                border: 5px solid black;
+                border-radius: 12px;
+                position: relative;
+                background-image: url("gameBackground.png");
+                margin:auto;
+                text-align: center;
+                margin-bottom: 20px;
+                box-shadow: 0 16px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            }
+            
+            header{
+                text-align: center;
+                text-decoration: none;
+                text-shadow: 2px 2px 4px #000000;
+                font-family: Cherry Cream Soda;
+                font-size: 70px;
+                color: rgb(169, 33, 33);
+            }
+            button {
+                background-color: white;
+                border: 2px  solid rgb(169, 33, 33);
+                color: black;
+                padding: 16px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                font-family: Cherry Cream Soda;
+                margin: 4px 2px;
+                margin-left: 200px;
+                transition-duration: 0.4s;
+                cursor: pointer;
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+                border-radius: 16px;
+           }
+            button:hover
+             {
+                background-color: rgb(169, 33, 33);
+                color: white;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <header>
+            <h2>Bug Smasher</h2>
+        </header>
+        <!--canvas size -->
+        <canvas id="bugSmasherCanvas" width="900" height="500" ></canvas>
+        <!--audio for bug click sound-->
+        <audio id="gameSound" src="gameSound.mp3"></audio>
+
+        <!--button to reset score-->
+        <button onclick="resetScore()">Reset Score</button>
+        <!--button to reset speed-->
+	    <button onclick="resetSpeed()">Reset Speed</button>
+       
+
+    
+    </body>
+</html>
